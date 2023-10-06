@@ -1,0 +1,27 @@
+
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px; /* Adjust the margin for spacing between buttons */
+}
+
+.navbar a {
+    text-decoration: none;
+    background-color: #555; /* Button background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+
+.navbar a:hover {
+    background-color: #333; /* Hover color */
+}
+
+.body{
+    background-color: maroon;
+}
