@@ -32,3 +32,39 @@
 .body{
     background-color: purple;
 }
+
+
+
+.form#contact {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form#contact label,
+.form#contact input,
+.form#contact textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.form#contact textarea {
+    height: 100px; 
+}
+
+.button[type="submit"] {
+    
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style error messages */
+#errorMessages {
+    margin-top: 10px;
+    font-size: 14px;
+}
