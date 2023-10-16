@@ -1,11 +1,14 @@
-(function(){
-        emailjs.init("9O1vaHt6YRhMNVjGz");
+const btn = document.getElementById('button');
 
     document.addEventListener("DOMContentLoaded", function() {
         const contact = document.getElementById("contact");
         const errorMessages = document.getElementById("errorMessages");
 
         contact.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            btn.value = 'Sending...';
+         
             errorMessages.textContent = "";
             let hasError = false;
 
@@ -61,17 +64,16 @@
             const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
             return phoneRegex.test(phone);
         }
-        function sendEmail(params) {
-            const serviceID = "service_nz0n4v1"; 
-            const templateID = "template_qtmlbp6"; 
 
-            emailjs.send(serviceID, templateID, params)
-                .then(res => {
-                    alert("Email was sent!");
-                })
-                .catch(error => {
-                    console.error("Email could not be sent:", error);
-                });
-        }
+        const serviceID = "service_nz0n4v1"; 
+        const templateID = "template_qtmlbp6"; 
+
+        emailjs.sendForm(serviceID, templateID, params)
+        .then(() => {
+          btn.value = 'Send Email';
+          alert('Sent!');
+        }, (err) => {
+          btn.value = 'Send Email';
+          alert(JSON.stringify(err));
+        });
     });
-})();
