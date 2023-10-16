@@ -45,15 +45,16 @@
 }
 
 .form#contact label,
-.form#contact input {
+.form#contact input,
+.form#contact textarea {
+
     display: block;
     margin-bottom: 10px;
     width: 100px;
 }
 
 .form#contact textarea {
-    width: 2800px;
-    height: 2000px; 
+    height: 200px; 
 }
 
 .button[type="submit"] {
