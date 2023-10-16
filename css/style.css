@@ -40,19 +40,20 @@
     padding: 20px;
     border-radius: 10px;
     max-width: 500px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .form#contact label,
-.form#contact input,
-.form#contact textarea {
+.form#contact input {
     display: block;
     margin-bottom: 10px;
-    width: 440%;
+    width: 100px;
 }
 
 .form#contact textarea {
-    height: 580px; 
+    width: 2800;
+    height: 2000px; 
 }
 
 .button[type="submit"] {
