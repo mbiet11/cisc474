@@ -64,7 +64,16 @@ document.addEventListener("DOMContentLoaded", function() {
         const serviceID = 'service_nz0n4v1'; 
         const templateID = 'template_qtmlbp6'; 
 
-        emailjs.send(serviceID, templateID, params)
+        const userEmail = params.user_email;
+        const userName = params.user_fname + ' ' + params.user_lname;
+    
+        const emailParams = {
+            user_name: userName,
+            user_email: userEmail,
+            message: params.user_message,
+        };
+
+        emailjs.send(serviceID, templateID, emailParams)
             .then(function(response) {
                 alert("Email was sent!");
             })

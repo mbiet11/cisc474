@@ -65,7 +65,6 @@
     cursor: pointer;
 }
 
-/* Style error messages */
 #errorMessages {
     margin-top: 10px;
     font-size: 14px;
