@@ -4,10 +4,19 @@
     align-items: center;
 }
 
-.picture{
-    border-radius: 50%; /* Makes the image circular */
-
+.picture {
+    width: 200px;
+    height: 200px;
+    overflow: hidden; /* This ensures the image is clipped to the container's circular shape */
+    border-radius: 50%; /* Makes the container circular */
 }
+
+.picture img {
+    width: 100%; /* Ensures the image fills the circular container */
+    height: auto; /* Maintains the image's aspect ratio */
+}
+
+/* -----------------------------------CSS FOR PICTURE AND INTRO--------------------------*/
 .navbar  {
     display: flex;
     justify-content: center; 

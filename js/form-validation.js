@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         errorMessages.textContent = "";
         let hasError = false;
 
+        // form field values
         const params = {
             user_lname: document.getElementById("user_lname").value,
             user_fname: document.getElementById("user_fname").value,
@@ -17,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
             user_phone: document.getElementById("user_phone").value,
             user_message: document.getElementById("user_message").value,
         };
+
+        // Validating form fields
 
         if (params.user_lname.trim() === "") {
             hasError = true;
@@ -50,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
         sendEmail(params);
     });
 
+
     function isValidEmail(email) {
         const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         return emailRegex.test(email);
@@ -64,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const serviceID = 'service_nz0n4v1'; 
         const templateID = 'template_qtmlbp6'; 
 
-
+        // Sending email using EmailJS
         emailjs.send(serviceID, templateID, {
                 from_name: params.user_fname + ' ' + params.user_lname,
                 email_id: params.user_email,
@@ -73,6 +77,16 @@ document.addEventListener("DOMContentLoaded", function() {
         })
             .then(function(response) {
                 alert("Email was sent!");
+
+                // Resets the form after the email is sent
+                document.getElementById("user_lname").value = "";
+                document.getElementById("user_fname").value = "";
+                document.getElementById("user_email").value = "";
+                document.getElementById("user_phone").value = "";
+                document.getElementById("user_message").value = "";
+
+                // Clears any previous error messages
+                errorMessages.textContent = "";
             })
             .catch(function(error) {
                 console.error("Email could not be sent:", error);
