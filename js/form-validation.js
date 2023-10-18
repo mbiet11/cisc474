@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         emailjs.send(serviceID, templateID, {
                 from_name: params.user_fname + ' ' + params.user_lname,
-                email: params.user_email,
+                email_id: params.user_email,
                 message: params.user_message,
 
         })
