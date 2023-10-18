@@ -13,8 +13,8 @@
 
 .picture img {
     display: flex;
+    align-content: center;
     justify-content: center;
-    text-align: center;
     width: 100%; /* Ensures the image fills the circular container */
     height: auto; /* Maintains the image's aspect ratio */
 }
@@ -52,13 +52,12 @@
 
 /* -------------------------------CSS FOR NAVBAR ENDS ---------------------------------*/
 
-body, html {
+
+
+.body{
     margin: 0;
     padding: 0;
     height: 100%;
-}
-
-.body{
     background-color: purple;
 }
 
