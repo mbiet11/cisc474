@@ -1,12 +1,13 @@
 .intro{
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .picture {
-    width: 200px;
-    height: 200px;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
     overflow: hidden; /* This ensures the image is clipped to the container's circular shape */
     border-radius: 50%; /* Makes the container circular */
 }
