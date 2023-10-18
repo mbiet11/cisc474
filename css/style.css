@@ -1,11 +1,20 @@
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.picture{
+    border-radius: 50%; /* Makes the image circular */
+
+}
 .navbar  {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    height: 100px; /* Adjust the height as needed */
-    background-color: #333; /* Optional background color for the container */
-}
+    justify-content: center; 
+    align-items: center; 
+    height: 100px; 
+    background-color: #333;
+ }
 
 .navbar ul {
     list-style: none;
@@ -14,12 +23,12 @@
 
 .navbar li {
     display: inline;
-    margin-right: 20px; /* Adjust the margin for spacing between buttons */
+    margin-right: 20px; 
 }
 
 .navbar a {
     text-decoration: none;
-    background-color: #555; /* Button background color */
+    background-color: #555; 
     color: white; /* Text color */
     padding: 10px 20px; /* Padding for buttons */
     border-radius: 5px; /* Rounded corners for buttons */
@@ -28,6 +37,9 @@
 .navbar a:hover {
     background-color: #333; /* Hover color */
 }
+
+/* -------------------------------CSS FOR NAVBAR ENDS ---------------------------------*/
+
 
 .body{
     background-color: purple;
@@ -40,6 +52,11 @@
     align-items: center;
     text-align: center;
     margin: 0 auto;
+}
+
+#contact label{
+    font-size:large;
+    font-weight: bold;
 }
 
 .form#contact {
@@ -76,3 +93,4 @@
     margin-top: 10px;
     font-size: 14px;
 }
+/* -------------------------------------------CSS FOR FORM ID ENDS HERE -------------------------------------- */
