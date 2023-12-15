@@ -36,6 +36,7 @@
 .navbar li {
     display: inline;
     margin-right: 20px; 
+    position: relative
 }
 
 .navbar a {
@@ -57,8 +58,8 @@
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    top: 70px; /* Adjust the top value to position the dropdown */
-    left: 630px; /* Position it directly under "Class Links" */
+    top: 100%; /* Adjust the top value to position the dropdown */
+    left: 0; /* Position it directly under "Class Links" */
 }
 
 .class-links.active .dropdown {
@@ -136,7 +137,7 @@
     margin-top: 10px;
     font-size: 14px;
 }
-
+/* -------------------------------------------CSS FOR FORM ID ENDS HERE -------------------------------------- */
 
 /*-------------------footer css--------------------*/
 .footer {
@@ -177,4 +178,28 @@
 .project p {
     color: #333;
 }
-/* -------------------------------------------CSS FOR FORM ID ENDS HERE -------------------------------------- */
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar .class-links .dropdown {
+        position: static;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
