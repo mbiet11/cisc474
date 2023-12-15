@@ -61,7 +61,7 @@
     left: 630px; /* Position it directly under "Class Links" */
 }
 
-.class-links:hover .dropdown {
+.class-links.active .dropdown {
     display: block;
 }
 .dropdown a {
