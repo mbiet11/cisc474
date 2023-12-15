@@ -50,6 +50,30 @@
     background-color: #333; /* Hover color */
 }
 
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 70px; /* Adjust the top value to position the dropdown */
+    left: 630px; /* Position it directly under "Class Links" */
+}
+
+.class-links:hover .dropdown {
+    display: block;
+}
+.dropdown a {
+    display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: none;
+}
 /* -------------------------------CSS FOR NAVBAR ENDS ---------------------------------*/
 
 
